@@ -1,0 +1,15 @@
+header: 
+  stamp: now 
+  frame_id: "odom"
+pose: 
+  position: 
+    x: 6.0
+    y: -05.
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+
+# puts on other side of rubble alley

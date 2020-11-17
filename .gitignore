@@ -1,0 +1,7 @@
+devel
+build
+world_parser/results
+world_parser/logfiles
+world_parser/test_files
+world_parser/*.txt
+world_parser/failures

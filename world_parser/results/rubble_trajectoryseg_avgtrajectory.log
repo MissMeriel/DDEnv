@@ -1,0 +1,151 @@
+world name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rubble_loose11.world
+rm: cannot remove '/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/*': No such file or directory
+cp: cannot create regular file '/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world': No such file or directory
+Number of models in original world is Traceback (most recent call last): File "/home/meriel/husky_ws/world_parser/model_counter.py", line 8, in <module> from sklearn.cluster import KMeans ImportError: No module named 'sklearn'
+rm: cannot remove '/home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log': No such file or directory
+error: resource not found: lms1xx
+ROS path [0]=/opt/ros/kinetic/share/ros
+ROS path [1]=/home/meriel/husky_ws/src
+ROS path [2]=/opt/ros/kinetic/share None
+when processing file: /home/meriel/husky_ws/src/husky/husky_description/urdf/accessories/sick_lms1xx_mount.urdf.xacro
+included from: /home/meriel/husky_ws/src/husky/husky_description/urdf/husky.urdf.xacro
+[31mwhile processing /home/meriel/husky_ws/src/husky/husky_gazebo/launch/spawn_husky.launch:
+while processing /home/meriel/husky_ws/src/husky/husky_control/launch/control.launch:
+while processing /home/meriel/husky_ws/src/husky/husky_description/launch/description.launch:
+Invalid <param> tag: Cannot load command parameter [robot_description]: command [/opt/ros/kinetic/lib/xacro/xacro '/home/meriel/husky_ws/src/husky/husky_description/urdf/husky.urdf.xacro'     robot_namespace:=/     laser_enabled:=true     kinect_enabled:=false     realsense_enabled:=false     urdf_extras:=     scan_topic:=/remapped_scan     realsense_topic:=realsense     --inorder     ] returned with code [2]. 
+
+Param xml is <param command="$(find xacro)/xacro '$(find husky_description)/urdf/husky.urdf.xacro'     robot_namespace:=$(arg robot_namespace)     laser_enabled:=$(arg laser_enabled)     kinect_enabled:=$(arg kinect_enabled)     realsense_enabled:=$(arg realsense_enabled)     urdf_extras:=$(arg urdf_extras)     scan_topic:=$(arg scan_topic)     realsense_topic:=$(arg realsense_topic)     --inorder     " name="robot_description"/>[0m
+[31mThe traceback for the exception was written to the log file[0m
+... logging to /home/meriel/.ros/log/3a560996-1a0a-11eb-9bb1-d0374508d26a/roslaunch-meriel-ThinkStation-P520-29185.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/meriel/husky_ws/src/husky/husky_gazebo/launch/husky_rough_terrain.launch
+[1]+  Exit 1                  roslaunch husky_gazebo husky_rough_terrain.launch world_name:=$world_name x:=$x y:=$y z:=$z scan_topic:=$scan_topic
+... logging to /home/meriel/.ros/log/43471ffe-1a0a-11eb-9bb1-d0374508d26a/roslaunch-meriel-ThinkStation-P520-29198.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/meriel/husky_ws/src/husky/husky_navigation/launch/amcl_rough_terrain_fakescan.launch
+[1mstarted roslaunch server http://meriel-ThinkStation-P520:34013/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /amcl/gui_publish_rate: 10.0
+ * /amcl/kld_err: 0.05
+ * /amcl/kld_z: 0.99
+ * /amcl/laser_lambda_short: 0.1
+ * /amcl/laser_likelihood_max_dist: 2.0
+ * /amcl/laser_max_beams: 60
+ * /amcl/laser_max_range: 12.0
+ * /amcl/laser_model_type: likelihood_field
+ * /amcl/laser_sigma_hit: 0.2
+ * /amcl/laser_z_hit: 0.95
+ * /amcl/laser_z_max: 0.05
+ * /amcl/laser_z_rand: 0.05
+ * /amcl/laser_z_short: 0.1
+ * /amcl/max_particles: 2000
+ * /amcl/min_particles: 500
+ * /amcl/odom_alpha1: 0.2
+ * /amcl/odom_alpha2: 0.2
+ * /amcl/odom_alpha3: 0.2
+ * /amcl/odom_alpha4: 0.2
+ * /amcl/odom_alpha5: 0.1
+ * /amcl/odom_frame_id: odom
+ * /amcl/odom_model_type: diff
+ * /amcl/recovery_alpha_fast: 0.0
+ * /amcl/recovery_alpha_slow: 0.0
+ * /amcl/resample_interval: 1
+ * /amcl/transform_tolerance: 1.0
+ * /amcl/update_min_a: 0.2
+ * /amcl/update_min_d: 0.25
+ * /amcl/use_map_topic: True
+ * /move_base/DWAPlannerROS/acc_lim_th: 3.2
+ * /move_base/DWAPlannerROS/acc_lim_x: 2.5
+ * /move_base/DWAPlannerROS/acc_lim_y: 0
+ * /move_base/DWAPlannerROS/forward_point_distance: 0.325
+ * /move_base/DWAPlannerROS/goal_distance_bias: 40.0
+ * /move_base/DWAPlannerROS/latch_xy_goal_tolerance: False
+ * /move_base/DWAPlannerROS/max_rot_vel: 1.0
+ * /move_base/DWAPlannerROS/max_scaling_factor: 0.2
+ * /move_base/DWAPlannerROS/max_trans_vel: 1.0
+ * /move_base/DWAPlannerROS/max_vel_x: 1.0
+ * /move_base/DWAPlannerROS/max_vel_y: 0
+ * /move_base/DWAPlannerROS/min_rot_vel: 0.2
+ * /move_base/DWAPlannerROS/min_trans_vel: 0.1
+ * /move_base/DWAPlannerROS/min_vel_x: 0.0
+ * /move_base/DWAPlannerROS/min_vel_y: 0
+ * /move_base/DWAPlannerROS/occdist_scale: 0.7
+ * /move_base/DWAPlannerROS/oscillation_reset_dist: 0.25
+ * /move_base/DWAPlannerROS/path_distance_bias: 24.0
+ * /move_base/DWAPlannerROS/penalize_negative_x: True
+ * /move_base/DWAPlannerROS/scaling_speed: 0.25
+ * /move_base/DWAPlannerROS/sim_granularity: 0.02
+ * /move_base/DWAPlannerROS/sim_time: 2.0
+ * /move_base/DWAPlannerROS/stop_time_buffer: 0.2
+ * /move_base/DWAPlannerROS/vtheta_samples: 20
+ * /move_base/DWAPlannerROS/vx_samples: 6
+ * /move_base/DWAPlannerROS/vy_samples: 0
+ * /move_base/DWAPlannerROS/xy_goal_tolerance: 0.2
+ * /move_base/DWAPlannerROS/yaw_goal_tolerance: 1.0
+ * /move_base/NavfnROS/allow_unknown: True
+ * /move_base/NavfnROS/default_tolerance: 0.1
+ * /move_base/TrajectoryPlannerROS/acc_lim_theta: 3.2
+ * /move_base/TrajectoryPlannerROS/acc_lim_x: 2.5
+ * /move_base/TrajectoryPlannerROS/angular_sim_granularity: 0.02
+ * /move_base/TrajectoryPlannerROS/controller_frequency: 20.0
+ * /move_base/TrajectoryPlannerROS/dwa: True
+ * /move_base/TrajectoryPlannerROS/escape_reset_dist: 0.1
+ * /move_base/TrajectoryPlannerROS/escape_reset_theta: 0.1
+ * /move_base/TrajectoryPlannerROS/escape_vel: -0.1
+ * /move_base/TrajectoryPlannerROS/gdist_scale: 1.0
+ * /move_base/TrajectoryPlannerROS/heading_lookahead: 0.325
+ * /move_base/TrajectoryPlannerROS/heading_scoring: False
+ * /move_base/TrajectoryPlannerROS/heading_scoring_timestep: 0.8
+ * /move_base/TrajectoryPlannerROS/holonomic_robot: False
+ * /move_base/TrajectoryPlannerROS/latch_xy_goal_tolerance: False
+ * /move_base/TrajectoryPlannerROS/max_vel_theta: 1.0
+ * /move_base/TrajectoryPlannerROS/max_vel_x: 1.0
+ * /move_base/TrajectoryPlannerROS/meter_scoring: True
+ * /move_base/TrajectoryPlannerROS/min_in_place_vel_theta: 0.2
+ * /move_base/TrajectoryPlannerROS/min_vel_theta: -1.0
+ * /move_base/TrajectoryPlannerROS/min_vel_x: 0.0
+ * /move_base/TrajectoryPlannerROS/occdist_scale: 0.1
+ * /move_base/TrajectoryPlannerROS/oscillation_reset_dist: 0.25
+ * /move_base/TrajectoryPlannerROS/pdist_scale: 0.75
+ * /move_base/TrajectoryPlannerROS/publish_cost_grid_pc: T[31mERROR: cannot launch node of type [map_server/map_server]: map_server
+ROS path [0]=/opt/ros/kinetic/share/ros
+ROS path [1]=/home/meriel/husky_ws/src
+ROS path [2]=/opt/ros/kinetic/share[0m
+[31mERROR: cannot launch node of type [amcl/amcl]: amcl
+ROS path [0]=/opt/ros/kinetic/share/ros
+ROS path [1]=/home/meriel/husky_ws/src
+ROS path [2]=/opt/ros/kinetic/share[0m
+[31mERROR: cannot launch node of type [move_base/move_base]: move_base
+ROS path [0]=/opt/ros/kinetic/share/ros
+ROS path [1]=/home/meriel/husky_ws/src
+ROS path [2]=/opt/ros/kinetic/share[0m
+Traceback (most recent call last):
+  File "/home/meriel/husky_ws/src/husky/husky_navigation/scripts/log_for_dd.py", line 10, in <module>
+    from move_base_msgs.msg import MoveBaseActionGoal
+ImportError: No module named move_base_msgs.msg
+[31m[pose_logger-5] process has died [pid 29241, exit code 1, cmd /home/meriel/husky_ws/src/husky/husky_navigation/scripts/log_for_dd.py __name:=pose_logger __log:=/home/meriel/.ros/log/43471ffe-1a0a-11eb-9bb1-d0374508d26a/pose_logger-5.log].
+log file: /home/meriel/.ros/log/43471ffe-1a0a-11eb-9bb1-d0374508d26a/pose_logger-5*.log[0m
+publishing message from /home/meriel/husky_ws/world_parser/../husky_predef_msgs/goal_ditch
+
+ERROR: file does not exist: /home/meriel/husky_ws/world_parser/../husky_predef_msgs/goal_ditch
+[2]+  Exit 1                  rostopic pub -s /move_base_simple/goal -r 50 geometry_msgs/PoseStamped -f $goalfilename
+grep: /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log: No such file or directory
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+grep: /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log: No such file or directory
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+grep: /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log: No such file or directory
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+grep: /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log: No such file or directory
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+grep: /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log: No such file or directory
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+grep: /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log: No such file or directory
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log

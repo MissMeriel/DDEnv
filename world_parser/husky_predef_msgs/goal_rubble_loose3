@@ -1,0 +1,17 @@
+header: 
+  stamp: now 
+  frame_id: "odom"
+pose: 
+  position: 
+    x: 2.5
+    y: -0.97
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+
+#[ INFO] [1600708974.605730237, 1532.069000000]: Setting goal: Frame:odom, Position(2.504, -0.973, 0.000), Orientation(0.000, 0.000, 0.000, 1.000) = Angle: 0.000
+
+#puts husky in middle of rubble

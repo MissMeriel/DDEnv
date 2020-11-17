@@ -1,0 +1,14 @@
+header: 
+  stamp: now 
+  frame_id: "odom"
+pose: 
+  position: 
+    x: 3.0
+    y: 3.48811006546
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+

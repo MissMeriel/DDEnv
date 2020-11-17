@@ -1,0 +1,673 @@
+world name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+Number of models in original world is 43
+warning: inconsistent namespace redefinitions for xmlns:xacro:
+ old: http://ros.org/wiki/xacro
+ new: http://www.ros.org/wiki/xacro (/opt/ros/kinetic/share/lms1xx/urdf/sick_lms1xx.urdf.xacro)
+/opt/ros/kinetic/lib/python2.7/dist-packages/roslaunch/loader.py:409: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(text)
+[0m[ INFO] [1603929654.540360099]: Finished loading Gazebo ROS API Plugin.[0m
+[0m[ INFO] [1603929654.540757262]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+[0m[ INFO] [1603929657.498496975, 1639.927000000]: waitForService: Service [/gazebo/set_physics_properties] is now available.[0m
+[0m[ INFO] [1603929657.519930896, 1639.947000000]: Physics dynamic reconfigure ready.[0m
+[1;33mWarning [parser_urdf.cc:1232][0m multiple inconsistent <gravity> exists due to fixed joint reduction overwriting previous value [true] with [false].
+[31m[ERROR] [1603929658.374295056, 1640.100000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/front_left_wheel[0m
+[31m[ERROR] [1603929658.375000317, 1640.100000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/front_right_wheel[0m
+[31m[ERROR] [1603929658.375708345, 1640.100000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/rear_left_wheel[0m
+[31m[ERROR] [1603929658.376436230, 1640.100000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/rear_right_wheel[0m
+/opt/ros/kinetic/lib/python2.7/dist-packages/roslaunch/loader.py:409: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(text)
+... logging to /home/meriel/.ros/log/cfe98424-1979-11eb-bbcf-9848275140dd/roslaunch-meriel-21702.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/meriel/husky_ws/src/husky/husky_navigation/launch/amcl_rough_terrain_fakescan.launch
+[1mstarted roslaunch server http://127.0.0.1:45801/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /amcl/gui_publish_rate: 10.0
+ * /amcl/kld_err: 0.05
+ * /amcl/kld_z: 0.99
+ * /amcl/laser_lambda_short: 0.1
+ * /amcl/laser_likelihood_max_dist: 2.0
+ * /amcl/laser_max_beams: 60
+ * /amcl/laser_max_range: 12.0
+ * /amcl/laser_model_type: likelihood_field
+ * /amcl/laser_sigma_hit: 0.2
+ * /amcl/laser_z_hit: 0.95
+ * /amcl/laser_z_max: 0.05
+ * /amcl/laser_z_rand: 0.05
+ * /amcl/laser_z_short: 0.1
+ * /amcl/max_particles: 2000
+ * /amcl/min_particles: 500
+ * /amcl/odom_alpha1: 0.2
+ * /amcl/odom_alpha2: 0.2
+ * /amcl/odom_alpha3: 0.2
+ * /amcl/odom_alpha4: 0.2
+ * /amcl/odom_alpha5: 0.1
+ * /amcl/odom_frame_id: odom
+ * /amcl/odom_model_type: diff
+ * /amcl/recovery_alpha_fast: 0.0
+ * /amcl/recovery_alpha_slow: 0.0
+ * /amcl/resample_interval: 1
+ * /amcl/transform_tolerance: 1.0
+ * /amcl/update_min_a: 0.2
+ * /amcl/update_min_d: 0.25
+ * /amcl/use_map_topic: True
+ * /move_base/DWAPlannerROS/acc_lim_th: 3.2
+ * /move_base/DWAPlannerROS/acc_lim_x: 2.5
+ * /move_base/DWAPlannerROS/acc_lim_y: 0
+ * /move_base/DWAPlannerROS/forward_point_distance: 0.325
+ * /move_base/DWAPlannerROS/goal_distance_bias: 40.0
+ * /move_base/DWAPlannerROS/latch_xy_goal_tolerance: False
+ * /move_base/DWAPlannerROS/max_rot_vel: 1.0
+ * /move_base/DWAPlannerROS/max_scaling_factor: 0.2
+ * /move_base/DWAPlannerROS/max_trans_vel: 1.0
+ * /move_base/DWAPlannerROS/max_vel_x: 1.0
+ * /move_base/DWAPlannerROS/max_vel_y: 0
+ * /move_base/DWAPlannerROS/min_rot_vel: 0.2
+ * /move_base/DWAPlannerROS/min_trans_vel: 0.1
+ * /move_base/DWAPlannerROS/min_vel_x: 0.0
+ * /move_base/DWAPlannerROS/min_vel_y: 0
+ * /move_base/DWAPlannerROS/occdist_scale: 0.7
+ * /move_base/DWAPlannerROS/oscillation_reset_dist: 0.25
+ * /move_base/DWAPlannerROS/path_distance_bias: 24.0
+ * /move_base/DWAPlannerROS/penalize_negative_x: True
+ * /move_base/DWAPlannerROS/scaling_speed: 0.25
+ * /move_base/DWAPlannerROS/sim_granularity: 0.02
+ * /move_base/DWAPlannerROS/sim_time: 2.0
+ * /move_base/DWAPlannerROS/stop_time_buffer: 0.2
+ * /move_base/DWAPlannerROS/vtheta_samples: 20
+ * /move_base/DWAPlannerROS/vx_samples: 6
+ * /move_base/DWAPlannerROS/vy_samples: 0
+ * /move_base/DWAPlannerROS/xy_goal_tolerance: 0.2
+ * /move_base/DWAPlannerROS/yaw_goal_tolerance: 1.0
+ * /move_base/NavfnROS/allow_unknown: True
+ * /move_base/NavfnROS/default_tolerance: 0.1
+ * /move_base/TrajectoryPlannerROS/acc_lim_theta: 3.2
+ * /move_base/TrajectoryPlannerROS/acc_lim_x: 2.5
+ * /move_base/TrajectoryPlannerROS/angular_sim_granularity: 0.02
+ * /move_base/TrajectoryPlannerROS/controller_frequency: 20.0
+ * /move_base/TrajectoryPlannerROS/dwa: True
+ * /move_base/TrajectoryPlannerROS/escape_reset_dist: 0.1
+ * /move_base/TrajectoryPlannerROS/escape_reset_theta: 0.1
+ * /move_base/TrajectoryPlannerROS/escape_vel: -0.1
+ * /move_base/TrajectoryPlannerROS/gdist_scale: 1.0
+ * /move_base/TrajectoryPlannerROS/heading_lookahead: 0.325
+ * /move_base/TrajectoryPlannerROS/heading_scoring: False
+ * /move_base/TrajectoryPlannerROS/heading_scoring_timestep: 0.8
+ * /move_base/TrajectoryPlannerROS/holonomic_robot: False
+ * /move_base/TrajectoryPlannerROS/latch_xy_goal_tolerance: False
+ * /move_base/TrajectoryPlannerROS/max_vel_theta: 1.0
+ * /move_base/TrajectoryPlannerROS/max_vel_x: 1.0
+ * /move_base/TrajectoryPlannerROS/meter_scoring: True
+ * /move_base/TrajectoryPlannerROS/min_in_place_vel_theta: 0.2
+ * /move_base/TrajectoryPlannerROS/min_vel_theta: -1.0
+ * /move_base/TrajectoryPlannerROS/min_vel_x: 0.0
+ * /move_base/TrajectoryPlannerROS/occdist_scale: 0.1
+ * /move_base/TrajectoryPlannerROS/oscillation_reset_dist: 0.25
+ * /move_base/TrajectoryPlannerROS/pdist_scale: 0.75
+ * /move_base/TrajectoryPlannerROS/publish_cost_grid_pc: True
+ * /move_base/TrajectoryPlannpublishing message from /home/meriel/husky_ws/world_parser/../husky_predef_msgs/goal_ditch
+
+/opt/ros/kinetic/lib/python2.7/dist-packages/rostopic/__init__.py:1806: YAMLLoadWarning: calling yaml.load_all() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  for d in data:
+publishing and latching message for 3.0 seconds
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+WARNING: gnome-web-photo is missing --> screenshots of websites will be disabled!
+
+
+Killing processes....
+gazebo: no process found
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 73: 20588 Killed                  roslaunch husky_gazebo husky_rough_terrain.launch world_name:=$world_name x:=$x y:=$y z:=$z scan_topic:=$scan_topic
+twist_marker_server: no process found
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 75: kill: (22936) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 76: 21702 Killed                  roslaunch husky_navigation amcl_rough_terrain_fakescan.launch
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 76: kill: (22941) - No such process
+[WARN] [1603929750.216754, 1706.386000]: Controller Spawner error while taking down controllers: unable to contact master
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 77: kill: (22946) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 78: kill: (22950) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 79: kill: (22954) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 80: kill: (22958) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 81: kill: (22962) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 82: kill: (22966) - No such process
+Traceback (most recent call last):
+  File "/home/meriel/husky_ws/src/husky/husky_navigation/scripts/fake_scanner.py", line 44, in <module>
+    main()
+  File "/home/meriel/husky_ws/src/husky/husky_navigation/scripts/fake_scanner.py", line 41, in main
+    rate.sleep()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/timer.py", line 103, in sleep
+    sleep(self._remaining(curr_time))
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/timer.py", line 166, in sleep
+    raise rospy.exceptions.ROSInterruptException("ROS shutdown request")
+rospy.exceptions.ROSInterruptException: ROS shutdown request
+
+
+Dirname is /home/meriel/husky_ws/src/husky/husky_navigation/scripts
+Publishing pose logs to <open file '/home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log', mode 'w' at 0x7fdf151b7540>
+
+
+[INFO] [1603929675.892108, 1657.501000]: /pose_loggerGOAL INITIALIZED AS: position: 
+  x: 6.75
+  y: -0.580357551575
+  z: 0.0
+orientation: 
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 1.0
+REPLAN
+Traceback (most recent call last):
+  File "/home/meriel/husky_ws/src/husky/husky_navigation/scripts/log_for_dd.py", line 100, in <module>
+    main()
+  File "/home/meriel/husky_ws/src/husky/husky_navigation/scripts/log_for_dd.py", line 95, in main
+    rate.sleep()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/timer.py", line 103, in sleep
+    sleep(self._remaining(curr_time))
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/timer.py", line 166, in sleep
+    raise rospy.exceptions.ROSInterruptException("ROS shutdown request")
+rospy.exceptions.ROSInterruptException: ROS shutdown request
+args.failure1: /home/meriel/husky_ws/world_parser/orig_failure.txt
+args.failure2: /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+endpose1 : [0.1418845571936892, 1.9083627222761868, 0.0, 0.0, 0.0, 0.8209992788273573, 0.570929228683345]
+endpose2 : [5.196903119782272, -0.7377169873848124, 0.0, 0.0, 0.0, -0.010049463879627588, 0.9999495028628856]
+dist_3d : 5.705694567534682
+dist_2d : 5.705694567534682
+distance : 5.705694567534682
+args.epsilon : 0.33
+DIFFERENT
+
+return value for original world is 50
+goal_epsilon is  0.33
+
+BEGINNING OF LOOP
+Clusters: 2 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 2
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 3 Models: 43
+New number of clusters: 3 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 3 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 3
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 4 Models: 43
+New number of clusters: 4 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 4 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 4
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 5 Models: 43
+New number of clusters: 5 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 5 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 5
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 6 Models: 43
+New number of clusters: 6 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 6 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 6
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 7 Models: 43
+New number of clusters: 7 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 7 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 7
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 8 Models: 43
+New number of clusters: 8 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 8 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 8
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 9 Models: 43
+New number of clusters: 9 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 9 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 9
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 10 Models: 43
+New number of clusters: 10 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 10 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 10
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 11 Models: 43
+New number of clusters: 11 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 11 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 11
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 12 Models: 43
+New number of clusters: 12 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 12 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 12
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 13 Models: 43
+New number of clusters: 13 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 13 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 13
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 14 Models: 43
+New number of clusters: 14 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 14 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 14
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 15 Models: 43
+New number of clusters: 15 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 15 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+
+Checking stopping conditions...
+curr_generation_count is 0
+curr_successes is 0
+curr_diff_failures is 0
+models is 43
+clusters is 15
+world_name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+models is now 43
+0 is 0
+models -ge clusters
+curr_successes -ge curr_generation_count
+curr_diff_failures -ge curr_generation_count
+curr_total_nonsim -ge curr_generation_count
+
+world_name is  /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/rough_terrain_gap.world
+clusters: 16 Models: 43
+New number of clusters: 16 Models: 43
+min_world_reached is false
+
+BEGINNING OF LOOP
+Clusters: 16 Models: 43
+
+Generating partitions...
+partitioning: trajectory_seg ordering:  avg_trajectory running script now..
+last_iter.world exists; total_generation_count is 0
+total_generation_count is 0
+curr_generation_count is 0
+
+Selecting next world from partitions...
+Choosing from...
+/home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world
+Checking world filename /home/meriel/husky_ws/src/husky/husky_gazebo/worlds/subworlds/last_iter.world

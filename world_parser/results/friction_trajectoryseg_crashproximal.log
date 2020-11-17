@@ -1,0 +1,195 @@
+world name is /home/meriel/husky_ws/world_parser/../src/husky/husky_gazebo/worlds/frictionpatch.world
+Number of models in original world is 36
+laser_enabled is 
+warning: inconsistent namespace redefinitions for xmlns:xacro:
+ old: http://ros.org/wiki/xacro
+ new: http://www.ros.org/wiki/xacro (/opt/ros/kinetic/share/lms1xx/urdf/sick_lms1xx.urdf.xacro)
+/opt/ros/kinetic/lib/python2.7/dist-packages/roslaunch/loader.py:409: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(text)
+[0m[ INFO] [1603473179.413816892]: Finished loading Gazebo ROS API Plugin.[0m
+[0m[ INFO] [1603473179.414168692]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+[0m[ INFO] [1603473180.522923653, 1264.891000000]: waitForService: Service [/gazebo/set_physics_properties] is now available.[0m
+[0m[ INFO] [1603473180.541595053, 1264.909000000]: Physics dynamic reconfigure ready.[0m
+[1;33mWarning [parser_urdf.cc:1232][0m multiple inconsistent <gravity> exists due to fixed joint reduction overwriting previous value [true] with [false].
+[31m[ERROR] [1603473181.746647108, 1265.203000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/front_left_wheel[0m
+[31m[ERROR] [1603473181.747792682, 1265.203000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/front_right_wheel[0m
+[31m[ERROR] [1603473181.748582663, 1265.203000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/rear_left_wheel[0m
+[31m[ERROR] [1603473181.749447216, 1265.203000000]: No p gain specified for pid.  Namespace: /gazebo_ros_control/pid_gains/rear_right_wheel[0m
+/opt/ros/kinetic/lib/python2.7/dist-packages/roslaunch/loader.py:409: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  data = yaml.load(text)
+... logging to /home/meriel/.ros/log/ff8fb8ea-1552-11eb-bcde-9848275140dd/roslaunch-meriel-28486.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/meriel/husky_ws/src/husky/husky_navigation/launch/amcl_rough_terrain_fakescan.launch
+[1mstarted roslaunch server http://127.0.0.1:36905/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /amcl/gui_publish_rate: 10.0
+ * /amcl/kld_err: 0.05
+ * /amcl/kld_z: 0.99
+ * /amcl/laser_lambda_short: 0.1
+ * /amcl/laser_likelihood_max_dist: 2.0
+ * /amcl/laser_max_beams: 60
+ * /amcl/laser_max_range: 12.0
+ * /amcl/laser_model_type: likelihood_field
+ * /amcl/laser_sigma_hit: 0.2
+ * /amcl/laser_z_hit: 0.95
+ * /amcl/laser_z_max: 0.05
+ * /amcl/laser_z_rand: 0.05
+ * /amcl/laser_z_short: 0.1
+ * /amcl/max_particles: 2000
+ * /amcl/min_particles: 500
+ * /amcl/odom_alpha1: 0.2
+ * /amcl/odom_alpha2: 0.2
+ * /amcl/odom_alpha3: 0.2
+ * /amcl/odom_alpha4: 0.2
+ * /amcl/odom_alpha5: 0.1
+ * /amcl/odom_frame_id: odom
+ * /amcl/odom_model_type: diff
+ * /amcl/recovery_alpha_fast: 0.0
+ * /amcl/recovery_alpha_slow: 0.0
+ * /amcl/resample_interval: 1
+ * /amcl/transform_tolerance: 1.0
+ * /amcl/update_min_a: 0.2
+ * /amcl/update_min_d: 0.25
+ * /amcl/use_map_topic: True
+ * /move_base/DWAPlannerROS/acc_lim_th: 3.2
+ * /move_base/DWAPlannerROS/acc_lim_x: 2.5
+ * /move_base/DWAPlannerROS/acc_lim_y: 0
+ * /move_base/DWAPlannerROS/goal_distance_bias: 32.0
+ * /move_base/DWAPlannerROS/latch_xy_goal_tolerance: False
+ * /move_base/DWAPlannerROS/max_rot_vel: 1.0
+ * /move_base/DWAPlannerROS/max_trans_vel: 0.5
+ * /move_base/DWAPlannerROS/max_vel_x: 0.5
+ * /move_base/DWAPlannerROS/max_vel_y: 0
+ * /move_base/DWAPlannerROS/min_rot_vel: 0.2
+ * /move_base/DWAPlannerROS/min_trans_vel: 0.1
+ * /move_base/DWAPlannerROS/min_vel_x: 0.0
+ * /move_base/DWAPlannerROS/min_vel_y: 0
+ * /move_base/DWAPlannerROS/path_distance_bias: 24.0
+ * /move_base/DWAPlannerROS/xy_goal_tolerance: 0.1
+ * /move_base/DWAPlannerROS/yaw_goal_tolerance: 1.0
+ * /move_base/NavfnROS/allow_unknown: True
+ * /move_base/NavfnROS/default_tolerance: 0.1
+ * /move_base/TrajectoryPlannerROS/acc_lim_theta: 3.2
+ * /move_base/TrajectoryPlannerROS/acc_lim_x: 2.5
+ * /move_base/TrajectoryPlannerROS/angular_sim_granularity: 0.02
+ * /move_base/TrajectoryPlannerROS/controller_frequency: 20.0
+ * /move_base/TrajectoryPlannerROS/dwa: True
+ * /move_base/TrajectoryPlannerROS/escape_reset_dist: 0.1
+ * /move_base/TrajectoryPlannerROS/escape_reset_theta: 0.1
+ * /move_base/TrajectoryPlannerROS/escape_vel: -0.1
+ * /move_base/TrajectoryPlannerROS/gdist_scale: 1.0
+ * /move_base/TrajectoryPlannerROS/heading_lookahead: 0.325
+ * /move_base/TrajectoryPlannerROS/heading_scoring: False
+ * /move_base/TrajectoryPlannerROS/heading_scoring_timestep: 0.8
+ * /move_base/TrajectoryPlannerROS/holonomic_robot: False
+ * /move_base/TrajectoryPlannerROS/latch_xy_goal_tolerance: False
+ * /move_base/TrajectoryPlannerROS/max_vel_theta: 1.0
+ * /move_base/TrajectoryPlannerROS/max_vel_x: 1.0
+ * /move_base/TrajectoryPlannerROS/meter_scoring: True
+ * /move_base/TrajectoryPlannerROS/min_in_place_vel_theta: 0.2
+ * /move_base/TrajectoryPlannerROS/min_vel_theta: -1.0
+ * /move_base/TrajectoryPlannerROS/min_vel_x: 0.0
+ * /move_base/TrajectoryPlannerROS/occdist_scale: 0.1
+ * /move_base/TrajectoryPlannerROS/oscillation_reset_dist: 0.25
+ * /move_base/TrajectoryPlannerROS/pdist_scale: 0.75
+ * /move_base/TrajectoryPlannerROS/publish_cost_grid_pc: True
+ * /move_base/TrajectoryPlannerROS/sim_granularity: 0.02
+ * /move_base/TrajectoryPlannerROS/sim_time: 2.0
+ * /move_base/TrajectoryPlannerROS/simple_attractor: False
+ * /move_base/TrajectoryPlannerROS/vtheta_samples: 20
+ * /move_base/TrajectoryPlannerROS/vx_samples: 6
+ * /move_base/TrajectoryPlannerROS/xy_goal_tolerance: 0.1
+ * /move_base/TrajectoryPlannerROS/yaw_goal_tolerance: 1.0
+ * /move_base/base_global_planner: navfn/NavfnROS
+ * /move_base/base_local_planner: dwa_local_planner...
+ * /move_base/controller_frequency: 5.0
+ * /move_base/global_costmap/footprint: [[-0.5, -0.33], [...
+ * /move_base/global_costmapublishing message from /home/meriel/husky_ws/world_parser/../husky_predef_msgs/goal_friction
+
+goal phrase is  GOAL REACHED
+
+/opt/ros/kinetic/lib/python2.7/dist-packages/rostopic/__init__.py:1806: YAMLLoadWarning: calling yaml.load_all() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  for d in data:
+publishing and latching message for 3.0 seconds
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+No goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+Goal phrase found in /home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log
+Early cutoff
+WARNING: gnome-web-photo is missing --> screenshots of websites will be disabled!
+
+
+Killing processes....
+gazebo: no process found
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 61: 27565 Killed                  roslaunch husky_gazebo husky_rough_terrain.launch world_name:=$world_name
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 61: 28486 Killed                  roslaunch husky_navigation amcl_rough_terrain_fakescan.launch
+twist_marker_server: no process found
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 62: kill: (29600) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 63: kill: (29604) - No such process
+[WARN] [1603473240.843530, 1323.978000]: Controller Spawner error while taking down controllers: unable to contact master
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 64: kill: (29608) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 65: kill: (29612) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 66: kill: (29616) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 67: kill: (29620) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 68: kill: (29624) - No such process
+/home/meriel/husky_ws/world_parser/execute_run.sh: line 69: kill: (29628) - No such process
+
+
+Dirname is /home/meriel/husky_ws/src/husky/husky_navigation/scripts
+Publishing pose logs to <open file '/home/meriel/husky_ws/src/husky/husky_navigation/scripts/poses.log', mode 'w' at 0x7fd391649540>
+
+
+[INFO] [1603473200.800764, 1284.108000]: /pose_loggerGOAL INITIALIZED AS: position: 
+  x: 5.0
+  y: 5.0
+  z: 0.0
+orientation: 
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 1.0
+Traceback (most recent call last):
+  File "/home/meriel/husky_ws/src/husky/husky_navigation/scripts/log_for_dd.py", line 100, in <module>
+    main()
+  File "/home/meriel/husky_ws/src/husky/husky_navigation/scripts/log_for_dd.py", line 95, in main
+    rate.sleep()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/timer.py", line 103, in sleep
+    sleep(self._remaining(curr_time))
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/timer.py", line 166, in sleep
+    raise rospy.exceptions.ROSInterruptException("ROS shutdown request")
+rospy.exceptions.ROSInterruptException: ROS shutdown request
+Traceback (most recent call last):
+  File "/home/meriel/husky_ws/src/husky/husky_navigation/scripts/fake_scanner.py", line 44, in <module>
+    main()
+  File "/home/meriel/husky_ws/src/husky/husky_navigation/scripts/fake_scanner.py", line 41, in main
+    rate.sleep()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/timer.py", line 103, in sleep
+    sleep(self._remaining(curr_time))
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/timer.py", line 166, in sleep
+    raise rospy.exceptions.ROSInterruptException("ROS shutdown request")
+rospy.exceptions.ROSInterruptException: ROS shutdown request
+
+return value for original world is 40
+returned successful run; invalid starting world
+
+real	1m6.239s
+user	0m16.111s
+sys	0m2.194s
+
+real	2m47.466s
+user	1m33.616s
+sys	0m57.042s
+
+real	641m8.319s
+user	83m41.011s
+sys	13m35.929s
