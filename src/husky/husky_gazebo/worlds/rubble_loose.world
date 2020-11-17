@@ -1,0 +1,1987 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='asphalt_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>20 20 0.1</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>20 20 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://asphalt_plane/materials/scripts</uri>
+              <uri>model://asphalt_plane/materials/textures</uri>
+              <name>vrc/asphalt</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.175147 0.155826 0 0 -0 0</pose>
+    </model>
+    <model name='nist_maze_wall_240'>
+      <static>1</static>
+      <link name='nist__maze_wall_240_link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://nist_maze_wall_240/meshes/nist_maze_wall_240.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://nist_maze_wall_240/meshes/nist_maze_wall_240.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.188291 0.401264 0 0 -0 0</pose>
+    </model>
+    <model name='nist_maze_wall_240_clone'>
+      <static>1</static>
+      <link name='nist__maze_wall_240_link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://nist_maze_wall_240/meshes/nist_maze_wall_240.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://nist_maze_wall_240/meshes/nist_maze_wall_240.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.17346 -1.48549 0.622091 3.14159 -1.56495 3.14159</pose>
+    </model>
+    <model name='lumber_2x4x48'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.301582 10.8021 0 0 -0 0</pose>
+    </model>
+    <model name='lumber_2x4x48_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.567371 0.391705 0.093055 0 -0 0</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_0'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.724971 -0.323869 0.093055 0 -0 0</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_1'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.256013 0.578044 0.093055 0 -0 0</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_2'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.403073 -0.49404 0.093055 0 -0 0</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-1.2368 -0.167728 0.093055 0 -0 0</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.131254 0.232657 0.141941 1.4176 -0.111304 -0.625759</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.53535 0.219867 0.141941 1.4176 -0.111304 -0.625759</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.398166 -0.087495 0.156537 1.58377 0.005395 0.624284</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_0'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.294229 0.026907 0.156537 1.58377 0.005395 0.624284</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_1'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.632493 0.574708 0.156537 1.58377 0.005395 0.624284</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>1504 193000000</sim_time>
+      <real_time>228 791406355</real_time>
+      <wall_time>1600273592 599872674</wall_time>
+      <iterations>227677</iterations>
+      <model name='asphalt_plane'>
+        <pose frame=''>-0.246081 -0.022375 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.246081 -0.022375 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48'>
+        <pose frame=''>0.30134 -0.010158 0.092012 -0.062994 -0.000823 0.002188</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.30134 -0.010158 0.092012 -0.062994 -0.000823 0.002188</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.034883 -0.078041 0.086002 2.26026 -0.27271 0.078379</acceleration>
+          <wrench>-0.049223 -0.110123 0.121357 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone'>
+        <pose frame=''>-0.565956 0.39355 0.093139 -0.042348 0.000154 4e-06</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.565956 0.39355 0.093139 -0.042348 0.000154 4e-06</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.002538 -0.417277 -0.34366 2.95521 0.031688 -0.006378</acceleration>
+          <wrench>-0.003581 -0.588819 -0.484939 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_0'>
+        <pose frame=''>-0.733807 -0.316175 0.092796 -0.133339 -1e-05 -0.002496</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.733807 -0.316175 0.092796 -0.133339 -1e-05 -0.002496</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.120847 0.126496 -1.77524 -0.083349 1.0805 -3.10677</acceleration>
+          <wrench>0.170527 0.178498 -2.50504 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_0_clone'>
+        <pose frame=''>-0.734906 -1.03609 0.118281 0.077436 -0.039585 -0.001873</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.734906 -1.03609 0.118281 0.077436 -0.039585 -0.001873</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.007262 -0.006422 0.061386 0.491443 -0.015286 0.045062</acceleration>
+          <wrench>0.010247 -0.009061 0.086622 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_0_clone_0'>
+        <pose frame=''>0.225576 -1.38996 0.092745 -0.033993 -4.1e-05 -0.002651</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.225576 -1.38996 0.092745 -0.033993 -4.1e-05 -0.002651</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.000605 0.005113 0.040178 -0.12103 0.013961 9e-06</acceleration>
+          <wrench>0.000854 0.007215 0.056695 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_1'>
+        <pose frame=''>0.256 0.577507 0.092775 0.013335 -0.000223 0.000114</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.256 0.577507 0.092775 0.013335 -0.000223 0.000114</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.042517 -0.52181 0.270975 -0.747811 0.930283 0.007725</acceleration>
+          <wrench>0.059996 -0.736326 0.382373 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_1_clone'>
+        <pose frame=''>-0.544827 -2.03168 0.093055 0 0 -0.002181</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.544827 -2.03168 0.093055 0 0 -0.002181</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_2'>
+        <pose frame=''>0.403077 -0.49448 0.092799 0.009905 8.9e-05 3e-06</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.403077 -0.49448 0.092799 0.009905 8.9e-05 3e-06</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.001027 -0.005747 0.045401 0.129425 -0.023129 -2e-05</acceleration>
+          <wrench>-0.001449 -0.008109 0.064066 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3'>
+        <pose frame=''>-0.803898 -0.237275 0.139359 1.42423 -0.107852 -0.630381</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.803898 -0.237275 0.139359 1.42423 -0.107852 -0.630381</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.157356 0.548112 2.10032 2.53026 0.318639 1.1114</acceleration>
+          <wrench>-0.222045 0.77344 2.96377 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone'>
+        <pose frame=''>-0.12442 0.242796 0.192663 1.55776 -0.005686 -0.650641</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.12442 0.242796 0.192663 1.55776 -0.005686 -0.650641</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.472937 -0.018126 0.125571 1.32418 1.55775 2.8011</acceleration>
+          <wrench>-0.667362 -0.025577 0.177194 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0'>
+        <pose frame=''>-0.534684 0.2205 0.156484 1.56306 0.005567 0.625301</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.534684 0.2205 0.156484 1.56306 0.005567 0.625301</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.456203 -0.373479 -0.386149 1.67951 0.691693 -2.00572</acceleration>
+          <wrench>-0.643749 -0.527016 -0.544895 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone'>
+        <pose frame=''>-0.399251 -0.084944 0.162923 1.43974 0.071986 0.623216</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.399251 -0.084944 0.162923 1.43974 0.071986 0.623216</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.182627 -0.082894 0.114358 1.92409 0.407177 1.96565</acceleration>
+          <wrench>-0.257704 -0.116972 0.16137 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_0'>
+        <pose frame=''>0.291584 0.033047 0.149148 1.49355 0.060263 0.669447</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.291584 0.033047 0.149148 1.49355 0.060263 0.669447</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.134178 -0.025409 0.073238 2.43772 0.415705 -0.800362</acceleration>
+          <wrench>-0.189338 -0.035855 0.103346 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_0_clone'>
+        <pose frame=''>-0.496946 -1.92956 0.14659 1.58018 0.130636 0.634989</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.496946 -1.92956 0.14659 1.58018 0.130636 0.634989</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.00874 -0.384185 -0.194883 -0.195052 -0.042334 2.47249</acceleration>
+          <wrench>-0.012333 -0.542124 -0.274999 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_0_clone_0'>
+        <pose frame=''>0.099099 -1.83136 0.11054 1.6856 -0.062588 2.65279</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.099099 -1.83136 0.11054 1.6856 -0.062588 2.65279</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.107473 -0.298125 0.527093 -1.25659 -0.690659 -3.10713</acceleration>
+          <wrench>-0.151654 -0.420684 0.74378 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_0_clone_0_clone'>
+        <pose frame=''>-0.892662 -2.12659 0.171524 1.64243 -0.168141 2.85737</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.892662 -2.12659 0.171524 1.64243 -0.168141 2.85737</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.001803 -0.002774 0.000345 1.90911 -0.588262 -0.357927</acceleration>
+          <wrench>-0.002544 -0.003915 0.000487 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_0_clone_0_clone_0'>
+        <pose frame=''>-0.727469 -0.89977 0.067048 1.55714 -0.000368 2.62846</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.727469 -0.89977 0.067048 1.55714 -0.000368 2.62846</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.004206 0.006829 0.013387 1.44786 1.18578 -3.13534</acceleration>
+          <wrench>0.005935 0.009637 0.018891 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_1'>
+        <pose frame=''>-0.608864 0.624452 0.646902 1.29634 -1.32932 1.55591</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.608864 0.624452 0.646902 1.29634 -1.32932 1.55591</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.027954 -0.097555 0.00948 -1.80267 0.625358 -0.712802</acceleration>
+          <wrench>-0.039446 -0.13766 0.013377 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_1_clone'>
+        <pose frame=''>-0.739623 -1.2685 0.150115 1.55203 -0.134598 1.41573</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.739623 -1.2685 0.150115 1.55203 -0.134598 1.41573</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.016347 -0.020989 0.027029 -0.460621 -0.764332 -2.26046</acceleration>
+          <wrench>0.023068 -0.029617 0.038141 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_1_clone_clone'>
+        <pose frame=''>0.211097 -1.13755 0.129471 1.55554 0.100636 1.41589</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.211097 -1.13755 0.129471 1.55554 0.100636 1.41589</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.012304 0.009427 0.019442 0.327633 0.318226 -1.13825</acceleration>
+          <wrench>0.017363 0.013303 0.027434 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_1_clone_clone_0'>
+        <pose frame=''>0.516116 -0.722251 0.131679 1.58676 -0.104258 1.41784</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.516116 -0.722251 0.131679 1.58676 -0.104258 1.41784</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.013149 -0.011544 0.031401 -0.409183 1.55006 -1.71459</acceleration>
+          <wrench>-0.018554 -0.01629 0.04431 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_1_clone_clone_1'>
+        <pose frame=''>-1.27798 -1.74768 0.156228 -2.94221 0.097324 1.47892</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.27798 -1.74768 0.156228 -2.94221 0.097324 1.47892</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.256263 0.846649 -4.19367 0.464133 -0.561449 0.700691</acceleration>
+          <wrench>-0.361612 1.19471 -5.91768 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_1_clone_clone_2'>
+        <pose frame=''>-1.6464 -2.11607 0.093274 0.414285 0.003379 0.44776</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.6464 -2.11607 0.093274 0.414285 0.003379 0.44776</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.235588 0.374922 -3.12769 1.44322 -0.226524 -1.08994</acceleration>
+          <wrench>0.332439 0.529052 -4.41348 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_clone'>
+        <pose frame=''>-1.67638 -1.09314 0.067655 1.5708 -0 0.618299</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.67638 -1.09314 0.067655 1.5708 -0 0.618299</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lumber_2x4x48_clone_3_clone_0_clone_clone_0'>
+        <pose frame=''>1.39628 -0.708292 0.067655 1.5708 -0 0.618299</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>1.39628 -0.708292 0.067655 1.5708 -0 0.618299</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 3e-06 -0.000966 -0.0007 0</acceleration>
+          <wrench>0 0 4e-06 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='nist_maze_wall_240'>
+        <pose frame=''>0.945782 0.196984 0.622091 3.14159 -1.56495 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='nist__maze_wall_240_link'>
+          <pose frame=''>0.945782 0.196984 0.622091 3.14159 -1.56495 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='nist_maze_wall_240_clone'>
+        <pose frame=''>0.867042 -2.96104 0.6203 3.14159 -1.56495 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='nist__maze_wall_240_link'>
+          <pose frame=''>0.867042 -2.96104 0.6203 3.14159 -1.56495 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>4.67241 -1.11583 3.83162 0 0.725796 3.07619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='lumber_2x4x48_clone_1_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.524315 -2.02867 0.092785 0.013259 -0.000198 1e-06</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_0_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.466569 -1.91149 0.14982 1.5014 0.051814 0.64515</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_0_clone_0'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.705299 -2.45997 0.14982 1.5014 0.051814 0.64515</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_0_clone_0_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.840219 -2.12477 0.10839 1.6732 -0.059806 2.63075</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_0_clone_0_clone_0'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.724725 -0.900106 0.10839 1.6732 -0.059806 2.63075</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_0_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.733051 -1.02761 0.09294 -0.145599 4e-06 -0.002643</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_0_clone_0'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.225626 -1.38492 0.09294 -0.145599 4e-06 -0.002643</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_1_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.816482 -1.76242 0.64687 1.30779 -1.32927 1.55615</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_1_clone_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.211902 -1.14102 0.150332 1.55174 -0.134939 1.41561</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_1_clone_clone_0'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.514316 -0.723863 0.150332 1.55174 -0.134939 1.41561</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_1_clone_clone_1'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-1.1966 -1.72474 0.150332 1.55174 -0.134939 1.41561</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_1_clone_clone_2'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.967114 -1.32699 0.150332 1.55174 -0.134939 1.41561</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-1.67413 -1.09032 0.162942 1.43979 0.071952 0.623</pose>
+    </model>
+    <model name='lumber_2x4x48_clone_3_clone_0_clone_clone_0'>
+      <link name='link'>
+        <inertial>
+          <mass>1.4111</mass>
+          <inertia>
+            <ixx>0.0011</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1771</iyy>
+            <iyz>0</iyz>
+            <izz>0.1763</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.2192 0.038 0.0888</size>
+            </box>
+          </geometry>
+          <surface>
+            <bounce>
+              <restitution_coefficient>0.01</restitution_coefficient>
+              <threshold>5</threshold>
+            </bounce>
+            <friction>
+              <ode>
+                <mu>5</mu>
+                <mu2>5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <soft_cfm>0.001</soft_cfm>
+                <kp>10000</kp>
+                <kd>1000</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://drc_practice_2x4/meshes/2x4x48.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.39853 -0.705468 0.162942 1.43979 0.071952 0.623</pose>
+    </model>
+  </world>
+</sdf>

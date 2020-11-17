@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Run the map server -->
+  <arg name="map_file" default="$(find husky_navigation)/maps/rough_terrain.yaml"/>
+  <arg name="record_all" default="true"/>
+  <arg name="output" default="screen"/>
+  <arg name="scan_topic" default="remapped_scan"/>
+  
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+  <!-- Bag all topics -->
+  <!--<node pkg="rosbag" type="record" name="rosbag_record_all"
+   args="record -a -o $(find husky_navigation)/bags/rough_terrain_gap"
+  />-->
+
+  <!--- Run AMCL -->
+  <include file="$(find husky_navigation)/launch/amcl.launch" >
+  <arg name="scan_topic" value="/remapped_scan" />
+  <arg name="odom_frame_id" value="odom" />
+  <arg name="output" value="$(arg output)" />
+  </include>
+
+  <!--- Run /scan data-faking node -->
+  <node name="fake_scan" pkg="husky_navigation" type="fake_scanner.py" output="screen"/>
+
+  <!--- Run pose-logging node -->
+  <node name="pose_logger" pkg="husky_navigation" type="log_for_dd.py" output="screen"/>
+
+  <!--- Run Move Base -->
+  <include file="$(find husky_navigation)/launch/move_base.launch">
+    <arg name="output" value="$(arg output)" />
+  </include>
+
+</launch>

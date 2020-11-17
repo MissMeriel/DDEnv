@@ -1,0 +1,28 @@
+footprint: [[-0.5, -0.33], [-0.5, 0.33], [0.5, 0.33], [0.5, -0.33]]
+# original padding is 0.01
+footprint_padding: 0.01
+# testing padding: 0.20
+# the footprint is 6mm to small when the padding is .01. We add 9cm to make it 20cm
+# this makes the footprint (20cm pad): 1400mm by 1060mm. Gazebo says the model is 988mm by 686mm. Overage: 41.2cm, 37.4cm
+robot_base_frame: base_link
+update_frequency: 4.0
+publish_frequency: 3.0
+transform_tolerance: 0.5
+
+resolution: 0.05
+
+obstacle_range: 5.5
+raytrace_range: 6.0
+
+#layer definitions
+static:
+    map_topic: /map
+    subscribe_to_updates: true
+
+obstacles_laser:
+    observation_sources: laser
+    laser: {data_type: LaserScan, clearing: true, marking: true, topic: scan, inf_is_valid: true}
+
+#original inflation radius 1.0
+inflation:
+    inflation_radius: 1.0

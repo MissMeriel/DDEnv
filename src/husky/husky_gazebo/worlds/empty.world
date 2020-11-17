@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    
+    <!-- ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- light -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+<!--    <include>
+      <uri>model://box</uri>
+      <name>box1</name>
+      <pose>1 0.75 0 0 0 0</pose>
+      <plugin name="factory" filename="libfactory.so"/>
+    </include>
+    
+    <include>
+      <uri>model://cylinder</uri>
+      <name>box2</name>
+      <pose>-1 -0.75 0 0 0 0</pose>
+    </include>
+-->    
+    <!-- pose== x y z ? ? ? -->
+    <!-- <model name="box">
+      <pose>1 0 0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </collision>
+        
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>-->
+    <!-- see ~/swarm_projects/swarm_ws/gazebo_plugin_tutorial-->
+    <!-- <plugin name="factory" filename="libfactory.so"/>
+    </model> -->
+
+    <plugin name="factory" filename="libfactory.so"/>
+    
+    <physics type="ode">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <gravity>0.0 0.0 -9.81</gravity>
+    </physics>
+
+  </world>
+</sdf>

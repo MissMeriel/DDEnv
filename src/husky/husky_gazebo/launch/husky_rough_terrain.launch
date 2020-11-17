@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="laser_enabled" default="true"/>
+  <arg name="kinect_enabled" default="false"/>
+  <arg name="realsense_enabled" default="false"/>
+  <arg name="world_name" default="$(find husky_gazebo)/worlds/rough_terrain_gap.world"/>
+  <arg name="x" default="-3.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="10.0"/>
+  <arg name="scan_topic" default="/remapped_scan"/>
+
+  <include file="$(find husky_gazebo)/launch/rough_terrain.launch">
+  <arg name="world_name" value="$(arg world_name)"/>
+  <!--remap from="/scan" to="/remapped_scan"/-->
+  </include>
+
+  <include file="$(find husky_gazebo)/launch/spawn_husky.launch">
+    <arg name="laser_enabled" value="true"/>
+    <arg name="kinect_enabled" value="$(arg kinect_enabled)"/>
+    <arg name="realsense_enabled" value="$(arg realsense_enabled)"/>
+    <arg name="x" value="$(arg x)"/>
+    <arg name="y" value="$(arg y)"/>
+    <arg name="z" value="$(arg z)"/>
+    <!-- <arg name="scan_topic" value="/remapped_scan"/> -->
+    <arg name="scan_topic" value="$(arg scan_topic)"/>
+    <!-- <remap from="/scan" to="/remapped_scan"/> -->
+    <!--<arg name="x" value="0.0"/>
+    <arg name="y" value="0.0"/>
+    <arg name="z" value="10.0"/>-->
+    <!-- <arg name="x" value="1.0"/>
+    <arg name="y" value="1.0"/>
+    <arg name="z" value="10.0"/> -->
+    <!--<arg name="yaw" default="0.0"/>-->
+  </include>
+
+
+</launch>
