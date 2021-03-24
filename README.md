@@ -38,7 +38,27 @@ $ cd world_parser/
 $ ./results_runner.sh
 ```
 
-To recreate Figure showing reduction over time of a scenario, run:
+This will kick off a series of subscripts to perform reduction for each environment using each schema for prioritization and partitioning. 
+The output of each script will be printed to a log file in the `results` directory and track the reduction of the world at each invocation of the schema. 
+The final results look like the following:
+
+```bash
+TEST METRICS:
+Starting env size: 43
+Minimal environment size:  2
+Iterations to find minimal world:  17
+Total number of worlds generated:  94
+Total number of tests run:  35
+Total number of reruns due to flakiness:  18
+Total number of heterogeneous failures:  5
+Total number of successful runs:  1
+
+real	42m6.336s
+user	2m51.120s
+sys	0m52.033s
+```
+
+To recreate Figure 2 showing reduction over time of a scenario, run:
 ```bash
 $ python gen_graph.py <logfile>
 ```
